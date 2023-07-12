@@ -72,7 +72,7 @@
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(227, 450);
+            this.sidebar.Size = new System.Drawing.Size(227, 511);
             this.sidebar.TabIndex = 1;
             // 
             // panel2
@@ -105,7 +105,7 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.btnpembelian);
+            this.panel3.Controls.Add(this.btnjenis);
             this.panel3.Location = new System.Drawing.Point(3, 154);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(136, 39);
@@ -113,7 +113,7 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.btnbarang);
+            this.panel4.Controls.Add(this.btnmerk);
             this.panel4.Location = new System.Drawing.Point(3, 199);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(136, 39);
@@ -121,7 +121,7 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.btnmerk);
+            this.panel5.Controls.Add(this.btnbarang);
             this.panel5.Location = new System.Drawing.Point(3, 244);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(136, 39);
@@ -129,7 +129,7 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.btnjenis);
+            this.panel6.Controls.Add(this.btnpembelian);
             this.panel6.Location = new System.Drawing.Point(3, 289);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(136, 39);
@@ -194,7 +194,7 @@
             this.btnbarang.ForeColor = System.Drawing.Color.White;
             this.btnbarang.Image = global::supermarket.Properties.Resources.paper_bag;
             this.btnbarang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnbarang.Location = new System.Drawing.Point(3, 3);
+            this.btnbarang.Location = new System.Drawing.Point(3, 6);
             this.btnbarang.Name = "btnbarang";
             this.btnbarang.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnbarang.Size = new System.Drawing.Size(130, 33);
@@ -210,7 +210,7 @@
             this.btnmerk.ForeColor = System.Drawing.Color.White;
             this.btnmerk.Image = global::supermarket.Properties.Resources.label;
             this.btnmerk.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnmerk.Location = new System.Drawing.Point(3, 3);
+            this.btnmerk.Location = new System.Drawing.Point(3, 6);
             this.btnmerk.Name = "btnmerk";
             this.btnmerk.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnmerk.Size = new System.Drawing.Size(130, 33);
@@ -269,7 +269,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 511);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.sidebar);
             this.Name = "datamaster";

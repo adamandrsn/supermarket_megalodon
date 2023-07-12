@@ -128,11 +128,11 @@ namespace supermarket
                     string kodePembelian = dataGridView1.SelectedRows[0].Cells["kode_pembelian"].Value.ToString();
                     koneksi.Open();
 
-                    // Hapus baris terkait dari tabel "melayani" terlebih dahulu
-                    string deleteMelayaniQuery = "DELETE FROM terdiri WHERE kode_pembelian = @kode_pembelian";
-                    SqlCommand deleteMelayaniCmd = new SqlCommand(deleteMelayaniQuery, koneksi);
-                    deleteMelayaniCmd.Parameters.AddWithValue("@kode_pembelian", kodePembelian);
-                    deleteMelayaniCmd.ExecuteNonQuery();
+                    // Hapus baris terkait dari tabel "terdiri" terlebih dahulu
+                    string deleteTerdiriQuery = "DELETE FROM terdiri WHERE kode_pembelian = @kode_pembelian";
+                    SqlCommand deleteTerdiriCmd = new SqlCommand(deleteTerdiriQuery, koneksi);
+                    deleteTerdiriCmd.Parameters.AddWithValue("@kode_pembelian", kodePembelian);
+                    deleteTerdiriCmd.ExecuteNonQuery();
 
                     // Hapus baris dari tabel "pembelian"
                     string deletePembelianQuery = "DELETE FROM pembelian WHERE kode_pembelian = @kode_pembelian";
@@ -145,7 +145,6 @@ namespace supermarket
 
                     dataGridView();
                     refreshform();
-                    LoadPembelianData(); // Memperbarui data ComboBox
                 }
             }
             else

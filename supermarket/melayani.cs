@@ -26,8 +26,6 @@ namespace supermarket
 
         private void refreshform()
         {
-            txtjumlah.Text = "";
-            txtjumlah.Enabled = false;
             cbxkodekaryawan.Text = "";
             cbxkodekaryawan.Enabled = false;
             cbxkodepembelian.Text = "";
@@ -42,7 +40,6 @@ namespace supermarket
         {
             cbxkodekaryawan.Enabled = true;
             cbxkodepembelian.Enabled = true;
-            txtjumlah.Enabled = true;
             btnSave.Enabled = true;
             btnClear.Enabled = true;
             btnadd.Enabled = true;
@@ -74,20 +71,18 @@ namespace supermarket
         {
             string kodepembelian = cbxkodepembelian.SelectedValue.ToString();
             string kodekaryawan = cbxkodekaryawan.SelectedValue.ToString();
-            string jumlah = txtjumlah.Text.Trim();
 
-            if (string.IsNullOrEmpty(kodepembelian) || string.IsNullOrEmpty(kodekaryawan) || string.IsNullOrEmpty(jumlah))
+            if (string.IsNullOrEmpty(kodepembelian) || string.IsNullOrEmpty(kodekaryawan))
             {
                 MessageBox.Show("Harap isi semua field yang diperlukan!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
                 koneksi.Open();
-                string query = "INSERT INTO melayani (kode_karyawan, kode_pembelian, jumlah_pembelian) VALUES (@kode_karyawan, @kode_pembelian, @jumlah_pembelian)";
+                string query = "INSERT INTO melayani (kode_karyawan, kode_pembelian) VALUES (@kode_karyawan, @kode_pembelian)";
                 SqlCommand cmd = new SqlCommand(query, koneksi);
                 cmd.Parameters.AddWithValue("@kode_karyawan", kodekaryawan);
                 cmd.Parameters.AddWithValue("@kode_pembelian", kodepembelian);
-                cmd.Parameters.AddWithValue("@jumlah_pembelian", jumlah);
                 cmd.ExecuteNonQuery();
 
                 koneksi.Close();
@@ -99,7 +94,6 @@ namespace supermarket
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            txtjumlah.Text = "";
             cbxkodekaryawan.SelectedIndex = -1;
             cbxkodepembelian.SelectedIndex = -1;
         }
@@ -112,7 +106,6 @@ namespace supermarket
         }
         private void clearBinding()
         {
-            txtjumlah.DataBindings.Clear();
             cbxkodekaryawan.DataBindings.Clear();
             cbxkodepembelian.DataBindings.Clear();
         }
@@ -168,7 +161,7 @@ namespace supermarket
         private void dataGridView()
         {
             koneksi.Open();
-            string str = "select kode_karyawan, kode_pembelian, jumlah_pembelian from dbo.melayani";
+            string str = "select kode_karyawan, kode_pembelian from dbo.melayani";
             SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -181,9 +174,5 @@ namespace supermarket
 
         }
 
-        private void txtjumlah_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

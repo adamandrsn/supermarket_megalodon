@@ -32,7 +32,6 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnadd = new System.Windows.Forms.Button();
-            this.txtjumlah = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -85,14 +84,6 @@
             this.btnadd.UseVisualStyleBackColor = true;
             this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
-            // txtjumlah
-            // 
-            this.txtjumlah.Location = new System.Drawing.Point(622, 166);
-            this.txtjumlah.Name = "txtjumlah";
-            this.txtjumlah.Size = new System.Drawing.Size(143, 22);
-            this.txtjumlah.TabIndex = 32;
-            this.txtjumlah.TextChanged += new System.EventHandler(this.txtjumlah_TextChanged);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -116,9 +107,8 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(459, 172);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 16);
+            this.label4.Size = new System.Drawing.Size(0, 16);
             this.label4.TabIndex = 37;
-            this.label4.Text = "Jumlah Pembelian";
             // 
             // tableLayoutPanel1
             // 
@@ -127,11 +117,10 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.37975F));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(452, 46);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.57281F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.42719F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(326, 157);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(326, 109);
             this.tableLayoutPanel1.TabIndex = 38;
             // 
             // cbxkodepembelian
@@ -190,7 +179,6 @@
             this.Controls.Add(this.btnopen);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btndelete);
-            this.Controls.Add(this.txtjumlah);
             this.Controls.Add(this.cbxkodekaryawan);
             this.Controls.Add(this.cbxkodepembelian);
             this.Controls.Add(this.label1);
@@ -214,7 +202,6 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnadd;
-        private System.Windows.Forms.TextBox txtjumlah;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;

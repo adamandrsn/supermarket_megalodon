@@ -68,7 +68,7 @@
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(210, 450);
+            this.sidebar.Size = new System.Drawing.Size(256, 450);
             this.sidebar.TabIndex = 3;
             // 
             // panel1
@@ -76,7 +76,7 @@
             this.panel1.Controls.Add(this.btnmelayani);
             this.panel1.Location = new System.Drawing.Point(3, 109);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(146, 39);
+            this.panel1.Size = new System.Drawing.Size(240, 39);
             this.panel1.TabIndex = 2;
             // 
             // panel3
@@ -84,7 +84,7 @@
             this.panel3.Controls.Add(this.btnpembelian);
             this.panel3.Location = new System.Drawing.Point(3, 154);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(146, 39);
+            this.panel3.Size = new System.Drawing.Size(240, 39);
             this.panel3.TabIndex = 3;
             // 
             // panel4
@@ -92,7 +92,7 @@
             this.panel4.Controls.Add(this.btnbarang);
             this.panel4.Location = new System.Drawing.Point(3, 199);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(146, 39);
+            this.panel4.Size = new System.Drawing.Size(240, 39);
             this.panel4.TabIndex = 4;
             // 
             // panel5
@@ -100,7 +100,7 @@
             this.panel5.Controls.Add(this.btnmerk);
             this.panel5.Location = new System.Drawing.Point(3, 244);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(146, 39);
+            this.panel5.Size = new System.Drawing.Size(240, 39);
             this.panel5.TabIndex = 5;
             // 
             // label1
@@ -152,9 +152,9 @@
             this.btnmelayani.Location = new System.Drawing.Point(3, 3);
             this.btnmelayani.Name = "btnmelayani";
             this.btnmelayani.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnmelayani.Size = new System.Drawing.Size(140, 33);
+            this.btnmelayani.Size = new System.Drawing.Size(234, 33);
             this.btnmelayani.TabIndex = 0;
-            this.btnmelayani.Text = "        Pelayanan";
+            this.btnmelayani.Text = "        Transaksi";
             this.btnmelayani.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnmelayani.UseVisualStyleBackColor = true;
             this.btnmelayani.Click += new System.EventHandler(this.btnmelayani_Click);
@@ -168,9 +168,9 @@
             this.btnpembelian.Location = new System.Drawing.Point(3, 3);
             this.btnpembelian.Name = "btnpembelian";
             this.btnpembelian.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnpembelian.Size = new System.Drawing.Size(140, 33);
+            this.btnpembelian.Size = new System.Drawing.Size(234, 33);
             this.btnpembelian.TabIndex = 0;
-            this.btnpembelian.Text = "        ";
+            this.btnpembelian.Text = "        Barang yang dibeli";
             this.btnpembelian.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnpembelian.UseVisualStyleBackColor = true;
             this.btnpembelian.Click += new System.EventHandler(this.btnpembelian_Click);
@@ -184,9 +184,9 @@
             this.btnbarang.Location = new System.Drawing.Point(3, 3);
             this.btnbarang.Name = "btnbarang";
             this.btnbarang.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnbarang.Size = new System.Drawing.Size(140, 33);
+            this.btnbarang.Size = new System.Drawing.Size(234, 33);
             this.btnbarang.TabIndex = 0;
-            this.btnbarang.Text = "        Mempunyai";
+            this.btnbarang.Text = "        Kategori Jenis dan Barang";
             this.btnbarang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnbarang.UseVisualStyleBackColor = true;
             this.btnbarang.Click += new System.EventHandler(this.btnbarang_Click);
@@ -200,9 +200,9 @@
             this.btnmerk.Location = new System.Drawing.Point(3, 3);
             this.btnmerk.Name = "btnmerk";
             this.btnmerk.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnmerk.Size = new System.Drawing.Size(140, 33);
+            this.btnmerk.Size = new System.Drawing.Size(234, 33);
             this.btnmerk.TabIndex = 0;
-            this.btnmerk.Text = "        Memiliki";
+            this.btnmerk.Text = "        Kategori Barang dan Merk";
             this.btnmerk.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnmerk.UseVisualStyleBackColor = true;
             this.btnmerk.Click += new System.EventHandler(this.btnmerk_Click);
@@ -240,7 +240,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(780, 450);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.sidebar);
             this.Name = "datarelasi";
