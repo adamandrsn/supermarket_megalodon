@@ -10,56 +10,44 @@ using System.Windows.Forms;
 
 namespace supermarket
 {
-    public partial class datamaster : Form
+    public partial class datarelasi : Form
     {
-        public datamaster()
+        public datarelasi()
         {
             InitializeComponent();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void btnback_Click(object sender, EventArgs e)
         {
-
+            homepage fm = new homepage();
+            fm.Show();
+            this.Hide();
         }
 
-        private void btnkaryawan_Click(object sender, EventArgs e)
+        private void btnmelayani_Click(object sender, EventArgs e)
         {
-            Karyawan fm = new Karyawan();
+            melayani fm = new melayani();
             fm.Show();
             this.Hide();
         }
 
         private void btnpembelian_Click(object sender, EventArgs e)
         {
-            Pembelian fm = new Pembelian();
+            terdiri fm = new terdiri();
             fm.Show();
             this.Hide();
         }
 
         private void btnbarang_Click(object sender, EventArgs e)
         {
-            barang fm = new barang();
+            mempunyai fm = new mempunyai();
             fm.Show();
             this.Hide();
         }
 
         private void btnmerk_Click(object sender, EventArgs e)
         {
-            merk fm = new merk();
-            fm.Show();
-            this.Hide();
-        }
-
-        private void btnjenis_Click(object sender, EventArgs e)
-        {
-            jenisbarang fm = new jenisbarang();
-            fm.Show();
-            this.Hide();
-        }
-
-        private void btnback_Click(object sender, EventArgs e)
-        {
-            homepage fm = new homepage();
+            memiliki fm = new memiliki();
             fm.Show();
             this.Hide();
         }

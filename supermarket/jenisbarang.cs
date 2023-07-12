@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace supermarket
 {
-    public partial class Pembelian : Form
+    public partial class jenisbarang : Form
     {
         private string stringConnection = "Data Source=AMSONUN;Initial Catalog=supermarket;Persist Security Info=True;User ID=sa;Password=123";
         private SqlConnection koneksi;
-        public Pembelian()
+        public jenisbarang()
         {
             InitializeComponent();
             koneksi = new SqlConnection(stringConnection);
@@ -24,37 +24,22 @@ namespace supermarket
         }
         private void refreshform()
         {
-            txtkodepem.Text = "";
-            txtkodepem.Enabled = false;
-            txttotalpem.Text = "";
-            txttotalpem.Enabled = false;
-            dttglpem.Text = "";
-            dttglpem.Enabled = false;
+            txtkodejenis.Text = "";
+            txtkodejenis.Enabled = false;
+            txtnamajenis.Text = "";
+            txtnamajenis.Enabled = false;
             btnSave.Enabled = false;
             btnClear.Enabled = false;
         }
         private void dataGridView()
         {
             koneksi.Open();
-            string str = "select kode_pembelian, total_pembelian, tanggal_pembelian from dbo.pembelian";
+            string str = "select kode_jenis, nama_jenis from dbo.jenis_barang";
             SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
             koneksi.Close();
-        }
-        private void txtkodepem_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnadd_Click(object sender, EventArgs e)
-        {
-            txtkodepem.Enabled = true;
-            txttotalpem.Enabled = true;
-            dttglpem.Enabled = true;
-            btnSave.Enabled = true;
-            btnClear.Enabled = true;
         }
 
         private void btnopen_Click(object sender, EventArgs e)
@@ -65,23 +50,21 @@ namespace supermarket
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string kdPem = txtkodepem.Text.Trim();
-            string ttlPem = txttotalpem.Text.Trim();
-            DateTime tgl = dttglpem.Value;
+            string kdJenis = txtkodejenis.Text.Trim();
+            string nmJenis = txtnamajenis.Text.Trim();
 
-            if (kdPem == "" || ttlPem == "")
+            if (kdJenis == "" || nmJenis == "")
             {
                 MessageBox.Show("Harap lengkapi semua field", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
                 koneksi.Open();
-                string str = "insert into dbo.pembelian (kode_pembelian, total_pembelian, tanggal_pembelian)" + "values(@kode_pembelian, @total_pembelian, @tanggal_pembelian)";
+                string str = "insert into dbo.jenis_barang (kode_jenis, nama_jenis)" + "values(@kode_jenis, @nama_jenis)";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add(new SqlParameter("kode_pembelian", kdPem));
-                cmd.Parameters.Add(new SqlParameter("total_pembelian", ttlPem));
-                cmd.Parameters.Add(new SqlParameter("tanggal_pembelian", tgl));
+                cmd.Parameters.Add(new SqlParameter("kode_jenis", kdJenis));
+                cmd.Parameters.Add(new SqlParameter("nama_jenis", nmJenis));
                 cmd.ExecuteNonQuery();
 
                 koneksi.Close();
@@ -110,13 +93,13 @@ namespace supermarket
                 DialogResult result = MessageBox.Show("Anda yakin ingin menghapus data ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    string kdPem = dataGridView1.SelectedRows[0].Cells["kode_pembelian"].Value.ToString();
+                    string kdjenis = dataGridView1.SelectedRows[0].Cells["kode_jenis"].Value.ToString();
 
                     koneksi.Open();
-                    string str = "DELETE FROM dbo.pembelian WHERE kode_pembelian = @kode_pembelian";
+                    string str = "DELETE FROM dbo.jenis_barang WHERE kode_jenis = @kode_jenis";
                     SqlCommand cmd = new SqlCommand(str, koneksi);
                     cmd.CommandType = CommandType.Text;
-                    cmd.Parameters.Add(new SqlParameter("kode_pembelian", kdPem));
+                    cmd.Parameters.Add(new SqlParameter("kode_jenis", kdjenis));
                     cmd.ExecuteNonQuery();
                     koneksi.Close();
 
@@ -133,39 +116,44 @@ namespace supermarket
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-                if (e.RowIndex >= 0)
-                {
-                    DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-                    txtkodepem.Text = row.Cells["kode_pembelian"].Value.ToString();
-                    txttotalpem.Text = row.Cells["total_pembelian"].Value.ToString();
-                    dttglpem.Text = row.Cells["tanggal_pembelian"].Value.ToString();
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                txtkodejenis.Text = row.Cells["kode_jenis"].Value.ToString();
+                txtnamajenis.Text = row.Cells["nama_jenis"].Value.ToString();
 
-                    dttglpem.Enabled = true;
-                    txttotalpem.Enabled = true;
-                    btnSave.Enabled = false;
-                    btnClear.Enabled = true;
-                }
+                txtkodejenis.Enabled = false;
+                txtnamajenis.Enabled = true;
+                btnSave.Enabled = false;
+                btnClear.Enabled = true;
+            }
+        }
+
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+            txtnamajenis.Enabled = true;
+            txtkodejenis.Enabled = true;
+            btnSave.Enabled = true;
+            btnClear.Enabled = true;
         }
 
         private void btnupdate_Click(object sender, EventArgs e)
         {
-            string kdPem = txtkodepem.Text.Trim();
-            string ttlPem = txttotalpem.Text.Trim();
-            DateTime tgl = dttglpem.Value;
+            string kdJenis = txtkodejenis.Text.Trim();
+            string nmJenis = txtnamajenis.Text.Trim();
 
-            if (kdPem == "")
+            if (kdJenis == "")
             {
-                MessageBox.Show("Masukkan Kode Pembelian", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Masukkan Kode Jenis", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
                 koneksi.Open();
-                string str = "UPDATE dbo.pembelian SET total_pembelian = @total_pembelian, tanggal_pembelian = @tanggal_pembelian WHERE kode_pembelian = @kode_pembelian";
+                string str = "UPDATE dbo.jenis_barang SET nama_jenis = @nama_jenis WHERE kode_jenis = @kode_jenis";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add(new SqlParameter("total_pembelian", ttlPem));
-                cmd.Parameters.Add(new SqlParameter("tanggal_pembelian", tgl));
-                cmd.Parameters.Add(new SqlParameter("kode_pembelian", kdPem));
+                cmd.Parameters.Add(new SqlParameter("nama_jenis", nmJenis));
+                cmd.Parameters.Add(new SqlParameter("kode_jenis", kdJenis));
                 cmd.ExecuteNonQuery();
 
                 koneksi.Close();
@@ -173,7 +161,6 @@ namespace supermarket
                 dataGridView();
                 refreshform();
             }
-
         }
     }
 }

@@ -63,6 +63,16 @@ namespace supermarket.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap brand {
+            get {
+                object obj = ResourceManager.GetObject("brand", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap burger_menu {
             get {
                 object obj = ResourceManager.GetObject("burger-menu", resourceCulture);
@@ -86,6 +96,56 @@ namespace supermarket.Properties {
         internal static System.Drawing.Bitmap choose {
             get {
                 object obj = ResourceManager.GetObject("choose", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap crate {
+            get {
+                object obj = ResourceManager.GetObject("crate", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap curve_down_arrow {
+            get {
+                object obj = ResourceManager.GetObject("curve-down-arrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap curve_down_arrow__1_ {
+            get {
+                object obj = ResourceManager.GetObject("curve-down-arrow (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap curve_down_arrow__2_ {
+            get {
+                object obj = ResourceManager.GetObject("curve-down-arrow (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap giving {
+            get {
+                object obj = ResourceManager.GetObject("giving", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,6 +236,36 @@ namespace supermarket.Properties {
         internal static System.Drawing.Bitmap photo_2023_07_06_10_45_291 {
             get {
                 object obj = ResourceManager.GetObject("photo_2023-07-06_10-45-291", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap service {
+            get {
+                object obj = ResourceManager.GetObject("service", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shopping {
+            get {
+                object obj = ResourceManager.GetObject("shopping", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shopping__1_ {
+            get {
+                object obj = ResourceManager.GetObject("shopping (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

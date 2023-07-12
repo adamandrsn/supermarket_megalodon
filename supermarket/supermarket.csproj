@@ -46,17 +46,71 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="barang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="barang.Designer.cs">
+      <DependentUpon>barang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datarelasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datarelasi.Designer.cs">
+      <DependentUpon>datarelasi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="homepage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="homepage.Designer.cs">
+      <DependentUpon>homepage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="jenisbarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="jenisbarang.Designer.cs">
+      <DependentUpon>jenisbarang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Karyawan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Karyawan.Designer.cs">
       <DependentUpon>Karyawan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="melayani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="melayani.Designer.cs">
+      <DependentUpon>melayani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="memiliki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="memiliki.Designer.cs">
+      <DependentUpon>memiliki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mempunyai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mempunyai.Designer.cs">
+      <DependentUpon>mempunyai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="merk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="merk.Designer.cs">
+      <DependentUpon>merk.cs</DependentUpon>
     </Compile>
     <Compile Include="Pembelian.cs">
       <SubType>Form</SubType>
@@ -66,11 +120,44 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="terdiri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="terdiri.Designer.cs">
+      <DependentUpon>terdiri.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="barang.resx">
+      <DependentUpon>barang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datarelasi.resx">
+      <DependentUpon>datarelasi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="homepage.resx">
+      <DependentUpon>homepage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jenisbarang.resx">
+      <DependentUpon>jenisbarang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Karyawan.resx">
       <DependentUpon>Karyawan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="melayani.resx">
+      <DependentUpon>melayani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="memiliki.resx">
+      <DependentUpon>memiliki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mempunyai.resx">
+      <DependentUpon>mempunyai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="merk.resx">
+      <DependentUpon>merk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pembelian.resx">
       <DependentUpon>Pembelian.cs</DependentUpon>
@@ -85,6 +172,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="terdiri.resx">
+      <DependentUpon>terdiri.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -136,6 +226,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\service.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giving.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve-down-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve-down-arrow %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve-down-arrow %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
